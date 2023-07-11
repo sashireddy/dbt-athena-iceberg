@@ -1,0 +1,21 @@
+name: "dbt_athena_development"
+
+config-version: 2
+version: "0.1.0"
+
+profile: "datalake"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+docs-paths: ["docs"]
+asset-paths: ["assets"]
+
+target-path: "target"
+log-path: "logs"
+packages-install-path: "packages"
+
+clean-targets: ["target", "dbt_packages"]

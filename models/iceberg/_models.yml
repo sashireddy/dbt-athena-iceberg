@@ -1,0 +1,309 @@
+version: 2
+
+models:
+  - name: iceberg_data_source
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: ts
+        data_type: timestamp
+      - name: test_date
+        data_type: date
+      - name: test_fixed_varchar
+        data_type: string
+      - name: test_string_varchar
+        data_type: varchar
+      - name: test_bool
+        data_type: boolean
+      - name: test_int
+        data_type: int
+      - name: test_float
+        data_type: float
+      - name: test_decimal
+        data_type: decimal
+      - name: test_bigint
+        data_type: bigint
+      - name: test_double
+        data_type: double
+      - name: test_array_string
+        data_type: array<varchar>
+      - name: test_array_int
+        data_type: array<int>
+      - name: test_array_bool
+        data_type: array<boolean>
+      - name: test_array_array_string
+        data_type: array<array<varchar>>
+      - name: test_array_map_string_string
+        data_type: array<map<varchar, varchar>>
+      - name: test_map_bool_string
+        data_type: map<boolean, varchar>
+      - name: test_map_int_string
+        data_type: map<int, varchar>
+      - name: test_map_string_array_string
+        data_type: map<varchar, array<varchar>>
+      - name: test_map_string_bool
+        data_type: map<varchar, boolean>
+      - name: test_map_string_int
+        data_type: map<varchar, int>
+      - name: test_map_string_string
+        data_type: map<varchar, varchar>
+      - name: test_map_string_decimal
+        data_type: map<varchar, decimal>
+
+  - name: iceberg_strat_append
+    config:
+      on_schema_change: append_new_columns
+      contract:
+        enforced: true
+    columns:
+      - name: test_timestamp
+        data_type: timestamp
+      - name: test_date
+        data_type: date
+      - name: test_fixed_varchar
+        data_type: string
+      - name: test_string_varchar
+        data_type: varchar
+      - name: test_bool
+        data_type: boolean
+      - name: test_int
+        data_type: int
+      - name: test_float
+        data_type: float
+      - name: test_decimal
+        data_type: decimal
+      - name: test_bigint
+        data_type: bigint
+      - name: test_double
+        data_type: double
+      - name: test_array_string
+        data_type: array<varchar>
+      - name: test_array_int
+        data_type: array<int>
+      - name: test_array_bool
+        data_type: array<boolean>
+      - name: test_array_array_string
+        data_type: array<array<varchar>>
+      - name: test_array_map_string_string
+        data_type: array<map<varchar, varchar>>
+      - name: test_map_bool_string
+        data_type: map<boolean, varchar>
+      - name: test_map_int_string
+        data_type: map<int, varchar>
+      - name: test_map_string_array_string
+        data_type: map<varchar, array<varchar>>
+      - name: test_map_string_bool
+        data_type: map<varchar, boolean>
+      - name: test_map_string_int
+        data_type: map<varchar, int>
+      - name: test_map_string_string
+        data_type: map<varchar, varchar>
+      - name: test_map_string_decimal
+        data_type: map<varchar, decimal>
+
+  - name: iceberg_strat_merge
+    config:
+      on_schema_change: append_new_columns
+      contract:
+        enforced: true
+    columns:
+      - name: test_timestamp
+        data_type: timestamp
+      - name: test_date
+        data_type: date
+      - name: test_fixed_varchar
+        data_type: string
+      - name: test_string_varchar
+        data_type: varchar
+      - name: test_bool
+        data_type: boolean
+      - name: test_int
+        data_type: int
+      - name: test_float
+        data_type: float
+      - name: test_decimal
+        data_type: decimal
+      - name: test_bigint
+        data_type: bigint
+      - name: test_double
+        data_type: double
+      - name: test_array_string
+        data_type: array<varchar>
+      - name: test_array_int
+        data_type: array<int>
+      - name: test_array_bool
+        data_type: array<boolean>
+      - name: test_array_array_string
+        data_type: array<array<varchar>>
+      - name: test_array_map_string_string
+        data_type: array<map<varchar, varchar>>
+      - name: test_map_bool_string
+        data_type: map<boolean, varchar>
+      - name: test_map_int_string
+        data_type: map<int, varchar>
+      - name: test_map_string_array_string
+        data_type: map<varchar, array<varchar>>
+      - name: test_map_string_bool
+        data_type: map<varchar, boolean>
+      - name: test_map_string_int
+        data_type: map<varchar, int>
+      - name: test_map_string_string
+        data_type: map<varchar, varchar>
+      - name: test_map_string_decimal
+        data_type: map<varchar, decimal>
+
+  - name: iceberg_strat_merge_delete
+    config:
+      on_schema_change: append_new_columns
+      contract:
+        enforced: true
+    columns:
+      - name: test_timestamp
+        data_type: timestamp
+      - name: test_date
+        data_type: date
+      - name: test_fixed_varchar
+        data_type: string
+      - name: test_string_varchar
+        data_type: varchar
+      - name: test_bool
+        data_type: boolean
+      - name: test_int
+        data_type: int
+      - name: test_float
+        data_type: float
+      - name: test_decimal
+        data_type: decimal
+      - name: test_bigint
+        data_type: bigint
+      - name: test_double
+        data_type: double
+      - name: test_array_string
+        data_type: array<varchar>
+      - name: test_array_int
+        data_type: array<int>
+      - name: test_array_bool
+        data_type: array<boolean>
+      - name: test_array_array_string
+        data_type: array<array<varchar>>
+      - name: test_array_map_string_string
+        data_type: array<map<varchar, varchar>>
+      - name: test_map_bool_string
+        data_type: map<boolean, varchar>
+      - name: test_map_int_string
+        data_type: map<int, varchar>
+      - name: test_map_string_array_string
+        data_type: map<varchar, array<varchar>>
+      - name: test_map_string_bool
+        data_type: map<varchar, boolean>
+      - name: test_map_string_int
+        data_type: map<varchar, int>
+      - name: test_map_string_string
+        data_type: map<varchar, varchar>
+      - name: test_map_string_decimal
+        data_type: map<varchar, decimal>
+      - name: test_rnd
+        data_type: int
+
+  - name: iceberg_strat_merge_except_few
+    config:
+      on_schema_change: append_new_columns
+      contract:
+        enforced: true
+    columns:
+      - name: test_timestamp
+        data_type: timestamp
+      - name: test_date
+        data_type: date
+      - name: test_fixed_varchar
+        data_type: string
+      - name: test_string_varchar
+        data_type: varchar
+      - name: test_bool
+        data_type: boolean
+      - name: test_int
+        data_type: int
+      - name: test_float
+        data_type: float
+      - name: test_decimal
+        data_type: decimal
+      - name: test_bigint
+        data_type: bigint
+      - name: test_double
+        data_type: double
+      - name: test_array_string
+        data_type: array<varchar>
+      - name: test_array_int
+        data_type: array<int>
+      - name: test_array_bool
+        data_type: array<boolean>
+      - name: test_array_array_string
+        data_type: array<array<varchar>>
+      - name: test_array_map_string_string
+        data_type: array<map<varchar, varchar>>
+      - name: test_map_bool_string
+        data_type: map<boolean, varchar>
+      - name: test_map_int_string
+        data_type: map<int, varchar>
+      - name: test_map_string_array_string
+        data_type: map<varchar, array<varchar>>
+      - name: test_map_string_bool
+        data_type: map<varchar, boolean>
+      - name: test_map_string_int
+        data_type: map<varchar, int>
+      - name: test_map_string_string
+        data_type: map<varchar, varchar>
+      - name: test_map_string_decimal
+        data_type: map<varchar, decimal>
+
+  - name: iceberg_strat_merge_only_few
+    config:
+      on_schema_change: append_new_columns
+      contract:
+        enforced: true
+    columns:
+      - name: test_timestamp
+        data_type: timestamp
+      - name: test_date
+        data_type: date
+      - name: test_fixed_varchar
+        data_type: string
+      - name: test_string_varchar
+        data_type: varchar
+      - name: test_bool
+        data_type: boolean
+      - name: test_int
+        data_type: int
+      - name: test_float
+        data_type: float
+      - name: test_decimal
+        data_type: decimal
+      - name: test_bigint
+        data_type: bigint
+      - name: test_double
+        data_type: double
+      - name: test_array_string
+        data_type: array<varchar>
+      - name: test_array_int
+        data_type: array<int>
+      - name: test_array_bool
+        data_type: array<boolean>
+      - name: test_array_array_string
+        data_type: array<array<varchar>>
+      - name: test_array_map_string_string
+        data_type: array<map<varchar, varchar>>
+      - name: test_map_bool_string
+        data_type: map<boolean, varchar>
+      - name: test_map_int_string
+        data_type: map<int, varchar>
+      - name: test_map_string_array_string
+        data_type: map<varchar, array<varchar>>
+      - name: test_map_string_bool
+        data_type: map<varchar, boolean>
+      - name: test_map_string_int
+        data_type: map<varchar, int>
+      - name: test_map_string_string
+        data_type: map<varchar, varchar>
+      - name: test_map_string_decimal
+        data_type: map<varchar, decimal>
